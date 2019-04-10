@@ -1,0 +1,43 @@
+customer table :
+
+create table customer (id int not null primary key,name varchar(30),password varchar(30),gender int,dob varchar(30),contact varchar(10),email varchar(30) )
+
+insert into customer (id,name,password,gender,dob,contact,email) values(100,'rahul','123',0,'08-07-1995','1234567890','rahul@gmail.com')
+
+
+mechanic table :
+
+create table mechanic (id int not null primary key,name varchar(30),password varchar(30),gender int,dob varchar(30),contact varchar(10),email varchar(30),latitude double precision,longitude double precision )
+
+insert into mechanic (id,name,password,gender,dob,contact,email,latitude,longitude) values(100,'rahul','123',0,'08-07-1995','1234567890','rahul@gmail.com',18.3456,71.12345)
+
+
+
+login table :
+
+
+create table login(id int , password varchar(30),type varchar(2
+
+
+request table :
+
+create table request(requestId int not null primary key,customerId int,customerName varchar(30),contact varchar(10),email varchar(30),location varchar(30),latitude double precision,longitude double precision,mechanicId int )
+
+requestId,customerId,customerName,contact,email,location ,latitude ,longitude ,mechanicId 
+
+raing table :
+
+create table rating (mechanicId int, customerId int, rating double precision)
+
+
+
+accept table
+
+create table accept(mechanicId int,customerId int,machanicLatitude double precision,mechanicLongitude double precision,customerLatitude double precision,customerLongitude double precision,requestId int)
+
+mechanicId ,customerId ,machanicLatitude,mechanicLongitude ,customerLatitude d,customerLongitude ,requestId 
+
+
+reject table :
+
+create table reject(mechanicId int,customerId int,requestId int)
